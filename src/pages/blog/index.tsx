@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from '../layout/layout'
-import Seo from '../components/Seo/Seo'
+import Layout from '../../layout/layout'
+import Seo from '../../components/Seo/Seo'
 import { graphql, Link } from 'gatsby'
 
 interface IBlogPageProps {
@@ -20,26 +20,17 @@ interface IBlogPageProps {
 }
 
 const BlogPage = ({ data }: IBlogPageProps) => {
+    let posts = data.allMdx.nodes
     return (
-        <Layout pageTitle="My Blog Posts">
-            <ul>
-                {
-                    data.allMdx.nodes.map((node) => (
-                        <article key={node.id}>
-                            <h2>
-                                <Link to={`/blog/${node.frontmatter.slug}`}>
-                                    {node.frontmatter.title}
-                                </Link>
-                            </h2>
-                            <p>Posted: {node.frontmatter.date}</p>
-                            <p>{node.excerpt}</p>
-                        </article>
-                    ))
-                }
-            </ul>
+        <Layout pageTitle="Articles" bannerImageUrl='/blogbanner.jpg'>
+            <BlogList posts={posts} />
         </Layout>
     )
 }
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Card, Col, Row } from 'react-bootstrap'
+import { BlockList } from 'net'
+import { BlogList } from '../../components/blog/bloglist'
 
 export const query = graphql`
     query MyQuery {
@@ -56,6 +47,6 @@ export const query = graphql`
         }
     }`
 
-export const Head = () => <Seo title="My Blog Posts" />
+export const Head = () => <Seo title="Blog Posts" />
 
 export default BlogPage
