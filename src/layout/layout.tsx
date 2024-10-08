@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import Banner from '../components/banner/banner'
-import { StaticImage } from 'gatsby-plugin-image'
 
 type props = {
     pageTitle: string,
@@ -56,16 +55,12 @@ const Layout = ({ pageTitle, children, bannerImageUrl }: props) => {
             {bannerImageUrl && <Banner imageUrl={bannerImageUrl} pageTitle={pageTitle} />}
             <Container data-bs-theme="dark">
                 <Row>
-
                     <main>
                         {children}
                     </main>
                 </Row>
             </Container>
         </main>
-
-
-
     )
 }
 
