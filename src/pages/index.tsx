@@ -1,49 +1,49 @@
 import * as React from "react"
-import { graphql, type HeadFC, type PageProps } from "gatsby"
-import LayoutMain from "../layout/layout"
-import { Container, Image } from "react-bootstrap"
-import BlogPage from "./blog"
-import { BlogList } from "../components/blog/bloglist"
+import { Link, graphql } from "gatsby"
 
+import Layout from "../layout/layout"
+import Seo from "../components/seo"
+import BlogList from "../components/BlogList/BlogList"
 
-const IndexPage: React.FC<PageProps> = ({ data }) => {
-  let posts = data.allMdx.nodes
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
+
   return (
-    <LayoutMain pageTitle={"Welcome"} bannerImageUrl="./home.jpg">
-      <p>Hi, I'm Hein.</p>
-
-      <p>
-        I am a software architect and consultant that has helped many clients over the last 20 years solve real-world problems with software. I have a passion for software development and I love to share my knowledge with others.
-      </p>
-      <p>
-        Welcome to my blog where I share my thoughts, ideas and experiences on .NET, Azure and other technologies.
-      </p>
-
-      <BlogList posts={posts} />
-
-    </LayoutMain>
+    <Layout location={location} title={siteTitle}>
+      <BlogList posts={posts}></BlogList>
+    </Layout>
   )
 }
 
-export const query = graphql`
-    query MyQuery {
-        allMdx(sort: { frontmatter: { date: DESC } }) {
-            nodes {
-            frontmatter {
-                date(formatString: "MMMM D, YYYY")
-                title
-                slug
-            }
-            id
-            excerpt
-            }
+export default BlogIndex
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+export const Head = () => <Seo title="All posts" />
+
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        fields {
+          slug
         }
-    }`
-
-export default IndexPage
-
-export const Head: HeadFC = () =>
-
-  <><title>Home</title>
-    <link rel='icon' href="./ht.png" />
-  </>
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+`

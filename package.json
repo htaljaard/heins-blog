@@ -1,40 +1,51 @@
 {
-  "name": "hein-s-blog",
-  "version": "1.0.0",
+  "name": "gatsby-starter-blog",
   "private": true,
-  "description": "hein-s-blog",
-  "author": "Hein Taljaard",
+  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "dependencies": {
+    "@fontsource-variable/montserrat": "^5.0.17",
+    "@fontsource/merriweather": "^5.0.8",
+    "bootstrap": "^5.3.3",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-feed": "^5.13.1",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-remark-images": "^7.13.2",
+    "gatsby-remark-prismjs": "^7.13.2",
+    "gatsby-remark-responsive-iframe": "^6.13.2",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "prismjs": "^1.29.0",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
+  "license": "0BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@mdx-js/react": "^3.0.1",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "gatsby": "^5.13.7",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.10.4",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "typescript": "^5.3.3"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
