@@ -7,6 +7,8 @@ hero_image_alt: ""
 hero_image_credit_text: ""
 hero_image_credit_link: ""
 related_posts: []
+series: "Semantic Kernel"
+stack: [".NET", "C#"]
 ---
 
 The world of Generative AI Solutions is vast and complex. It can be difficult to know where to start. In this blog post, we will walk you through the process of getting started with Semantic Kernel, 
