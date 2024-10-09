@@ -31,6 +31,7 @@ const Seo = ({ description, title }) => {
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <link rel="icon" type="image/png" href="logo.svg" />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />

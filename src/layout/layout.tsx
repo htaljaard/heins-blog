@@ -27,11 +27,11 @@ const Layout = ({ location, title, children }) => {
       <NavBar />
       {/* <header className="global-header">{header}</header> */}
       <main>{children}</main>
-      <footer>
+      {/* <footer>
         <div className="footerContent">© {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a></div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
