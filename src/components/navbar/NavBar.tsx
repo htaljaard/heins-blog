@@ -12,13 +12,12 @@ export function NavBar(props: INavBarProps) {
                 <Navbar.Brand as={Link} to="/">
                     <Image src="/logo.png" height='30' className="d-inline-block align-top" />{' '}
                     Hein Taljaard</Navbar.Brand>
-                {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-left">
+                    <Nav>
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
                     </Nav>
-                </Navbar.Collapse> */}
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );
