@@ -2,6 +2,7 @@
 title: "Getting started with Semantic Kernel"
 date: "2024-10-08"
 slug: "getting-started-with-semantic-kernel"
+video: "https://youtu.be/WBYaSRa42sM"
 hero_image: "./image.png"
 hero_image_alt: ""
 hero_image_credit_text: ""
@@ -9,6 +10,7 @@ hero_image_credit_link: ""
 related_posts: []
 series: "Semantic Kernel"
 stack: [".NET", "C#"]
+next: ""
 ---
 
 The world of Generative AI Solutions is vast and complex. It can be difficult to know where to start. In this blog post, we will walk you through the process of getting started with Semantic Kernel, 
@@ -30,7 +32,7 @@ For this guide, you will need an Azure OpenAI or OpenAI subscription.
 Getting started is really easy... as with most .NET projects, you start by getting the NuGet package. 
 
 ```bash
-dotnet add package Microsoft.SemanticKernel --version 1.21.1
+dotnet add package Microsoft.SemanticKernel
 ```
 
 You will then proceed to use the very friendly builder pattern that the team provides. It is really easy to get started with.Though you can invoke prompts directly, 

@@ -14,6 +14,7 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <Container>
+
         <article
           className="blog-post"
           itemScope
@@ -23,6 +24,13 @@ const BlogPostTemplate = ({
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <p>{post.frontmatter.date}</p>
           </header>
+
+          {post.frontmatter.video && (
+            <div className="video-container" style={{ display: 'flex', justifyContent: 'center', marginBottom: '25px' }}>
+              <iframe width="560" height="315" src={post.frontmatter.video} title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          )}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
@@ -92,6 +100,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        video
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
