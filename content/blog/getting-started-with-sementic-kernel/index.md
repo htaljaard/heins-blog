@@ -2,7 +2,7 @@
 title: "Getting started with Semantic Kernel"
 date: "2024-10-08"
 slug: "getting-started-with-semantic-kernel"
-video: "https://youtu.be/WBYaSRa42sM"
+video: "https://www.youtube.com/embed/WBYaSRa42sM?si=xmipz-txR3oplY88"
 hero_image: "./image.png"
 hero_image_alt: ""
 hero_image_credit_text: ""
@@ -44,6 +44,7 @@ The following snippet assumes that you have the model information. If you don't 
 var builder = Kernel.CreateBuilder().AddAzureOpenAIChatCompletion(modelId, endpoint, apiKey);
 var kernel = builder.Build();
 ```
+
 That's if for the setup. Now you can start using the kernel to generate text. 
 First, you will get a copy of the chat completion service and instantiate a chat history object. 
 
@@ -51,6 +52,7 @@ First, you will get a copy of the chat completion service and instantiate a chat
 var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
 var history = new ChatHistory();
 ```
+
 Now, you can start chatting. 
 
 ```csharp

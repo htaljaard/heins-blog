@@ -102,6 +102,7 @@ The ```PromptTemplateConfig``` has a static method ```FromJSON``` that, as you m
 The input variables have a few basic properties we have already seen and are mostly self explanatory, there is one we specifically need to look at now called ```AllowDangerouslySetContent```. As we will be using prompts with the ```IChatCompletionServivce```, it would be wise to set this to false to protect against prompt injection attacks. Here is a quick outline of the input variable class.
 
 
+
 | Property                    | Type    | Description                                      |
 |-----------------------------|---------|--------------------------------------------------|
 | Name                        | string  | The name of the input variable                   |
@@ -110,6 +111,7 @@ The input variables have a few basic properties we have already seen and are mos
 | IsRequired                  | bool | If set to false, the kernel won't force you to enter a value | 
 | JsonSchema                  | string  | Serialized into a KernelJsonSchema instance | 
 | AllowDangerouslySetContent  | bool  | Set to false when using prompts in IChatCompletion |
+
 
 ### Prompt Execution Settings
 
@@ -120,6 +122,7 @@ I was watching a Microsoft session on YouTube when they were talking about the A
 
 ### OpenAI Properties Explained
 
+
 | Property          | Description                                                                                   |
 |-------------------|-----------------------------------------------------------------------------------------------|
 | `max_tokens`      | The maximum number of tokens to generate in the response. This includes both input and output tokens. |
@@ -127,6 +130,7 @@ I was watching a Microsoft session on YouTube when they were talking about the A
 | `top_p`           | Uses nucleus sampling to control the diversity of the output. A value of 0.0 means only the most likely tokens are considered. |
 | `presence_penalty`| Penalizes new tokens based on whether they appear in the text so far, encouraging the model to talk about new topics. |
 | `frequency_penalty`| Penalizes new tokens based on their existing frequency in the text so far, reducing the likelihood of repeating the same line verbatim. |
+
 
 ## Hooking it all up
 After all that theory, the good news is, you can import all your prompts with a 1-liner. 
