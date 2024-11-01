@@ -13,7 +13,7 @@ stack: [".NET", "C#"]
 next: ""
 previous: ""
 ---
-#Semantic Kernel Prompts
+# Semantic Kernel Prompts
 
 Not everyone is a prompting prodigy. Let's be honest, it's a tough new skill to get used to - especially if you aren't a technically minded person. Seeing as the value of LLMs are somewhat linked to our ability to prompt, it feels like a skill we should be getting good at, but as with all tech, most people just couldn't be bothered.
 

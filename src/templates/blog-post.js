@@ -31,6 +31,14 @@ const BlogPostTemplate = ({
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           )}
+          {!post.frontmatter.video && post.frontmatter.image && (
+            <img
+              src={post.frontmatter.image}
+              alt={post.frontmatter.title}
+              style={{ width: '100%', marginBottom: '25px' }}
+            />
+          )}
+
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
