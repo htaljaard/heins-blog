@@ -153,5 +153,9 @@ builder.Host.UseSerilog((_, config) =>
 
 # Useful resources
 [Serilog Application Insights Sink](https://github.com/serilog-contrib/serilog-sinks-applicationinsights)
+
 [Application Insights for ASP.NET Core Applications](https://learn.microsoft.com/en-us/azure/azure-monitor/app/asp-net-core)
+
 [Enable Azure Monitor OpenTelemetry for .NET, Node.js, Python, and Java applications](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-enable?tabs=aspnetcore#enable-azure-monitor-opentelemetry-for-net-nodejs-python-and-java-applications)
+
+[My Repo to follow some examples](https://github.com/htaljaard/OTEL-and-Logging)
