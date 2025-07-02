@@ -2,7 +2,7 @@
 title: "Issues using Prompts in Copilot Studio Agents"
 date: "2025-07-12"
 slug: "issues-with-prompts-copilot-studio"
-video: "https://www.youtube.com/watch?v=4aL6IkKRvQg"
+video: "https://www.youtube.com/embed/4aL6IkKRvQg?si=PgwGvlLYxzWhNk4T"
 hero_image: ""
 hero_image_alt: ""
 hero_image_credit_text: ""
