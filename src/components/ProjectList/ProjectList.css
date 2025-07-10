@@ -1,0 +1,30 @@
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-card p {
+    color: #666;
+}
+
+.project-card small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #999;
+}

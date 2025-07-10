@@ -3,15 +3,25 @@ import Seo from '../components/seo';
 import Layout from '../layout/layout';
 import { graphql } from 'gatsby';
 import BlogList from '../components/BlogList/BlogList';
+import SearchAndFilter from '../components/SearchAndFilter';
+import { useState } from 'react';
 
 export interface IBlogPageProps {
 }
 
 const BlogPage = ({ location, data }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const [searchTerm, setSearchTerm] = useState('');
+  const posts = data.allMarkdownRemark.nodes;
+
+  const filteredPosts = posts.filter(post =>
+    post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.frontmatter.description?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Layout location={location} title="Blogs">
-      <BlogList posts={posts}></BlogList>
+      <SearchAndFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <BlogList posts={filteredPosts}></BlogList>
     </Layout>
   );
 }
@@ -26,7 +36,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } },
+      sort: { frontmatter: { date: DESC } }
+    ) {
       nodes {
         excerpt
         fields {
@@ -40,4 +53,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

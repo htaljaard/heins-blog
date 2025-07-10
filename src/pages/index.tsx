@@ -5,6 +5,7 @@ import Layout from "../layout/layout"
 import Seo from "../components/seo"
 import BlogList from "../components/BlogList/BlogList"
 import { PageBanner } from "../components/banner/PageBanner"
+import TopicsSection from "../components/TopicsSection"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -13,7 +14,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <PageBanner backgroundImage="./HomeBanner.jpg" headerText="Welcome to my blog"></PageBanner>
-      <BlogList posts={posts}></BlogList>
+      <TopicsSection />
+      {/* <BlogList posts={posts}></BlogList> */}
     </Layout>
   )
 }

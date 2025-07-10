@@ -1,0 +1,8 @@
+.home-banner-background {
+  background-image: url('./HomeBanner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
