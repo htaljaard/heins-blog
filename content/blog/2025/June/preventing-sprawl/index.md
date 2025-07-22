@@ -2,7 +2,7 @@
 title: "Preventing Agent Sprawl in Power Platform: A Simple Governance Hack"
 date: "2025-0623"
 slug: "preventing-agent-sprawl"
-video: ""https://www.youtube.com/embed/KfEl5uXPNLo?si=tu2nLbfPaJ6GhRJB"
+video: "https://www.youtube.com/embed/KfEl5uXPNLo?si=tu2nLbfPaJ6GhRJB"
 hero_image: ""
 hero_image_alt: ""
 hero_image_credit_text: ""
