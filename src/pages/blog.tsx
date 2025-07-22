@@ -20,7 +20,7 @@ const BlogPage = ({ location, data }) => {
 
   return (
     <Layout location={location} title="Blogs">
-      <SearchAndFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      {/* <SearchAndFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
       <BlogList posts={filteredPosts}></BlogList>
     </Layout>
   );

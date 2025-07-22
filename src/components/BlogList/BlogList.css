@@ -54,3 +54,33 @@
   font-size: 0.875rem;
   color: #ccc; /* Adjusted footer text color for better contrast */
 }
+
+.filter-toggle {
+  margin-bottom: 1rem;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.filter-section {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-section label {
+  color: #ccc;
+}
+
+.apply-filters {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
