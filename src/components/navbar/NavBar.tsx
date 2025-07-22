@@ -17,9 +17,9 @@ export function NavBar(props: INavBarProps) {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
                     <Nav>
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/about-me">About Me</Nav.Link>
+                        {/* <Nav.Link as={Link} to="/about-me">About Me</Nav.Link> */}
                         <Nav.Link as={Link} to="/blog">Blogs</Nav.Link>
-                        <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
+                        {/* <Nav.Link as={Link} to="/projects">Projects</Nav.Link> */}
                     </Nav>
                     <Nav className="ms-auto">
                         <Nav.Link href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">

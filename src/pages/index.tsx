@@ -14,8 +14,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <PageBanner backgroundImage="./HomeBanner.jpg" headerText="Welcome to my blog"></PageBanner>
-      <TopicsSection />
-      {/* <BlogList posts={posts}></BlogList> */}
+      {/* <TopicsSection /> */}
+      <BlogList posts={posts}></BlogList>
     </Layout>
   )
 }
@@ -36,7 +36,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+    ) {
       nodes {
         excerpt
         fields {

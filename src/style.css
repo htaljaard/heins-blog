@@ -247,6 +247,8 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
+  background-color: #15202b !important;
+  height: 100vh;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -322,6 +324,10 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+article{
+  color:#fff !important
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -335,3 +341,4 @@ a:focus {
     list-style-position: inside;
   }
 }
+

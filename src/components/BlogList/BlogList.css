@@ -1,37 +1,56 @@
+/*  */
+
 .blog-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 18rem;
+  text-decoration: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff; /* Changed text color to white */
+  padding: 1rem 1rem; /* Added padding to left and right */
+  border-radius: 0.5rem;
 }
 
-.card-title {
-    max-height: 4.5em;
-    /* 3 lines of text */
-    /* overflow: hidden; */
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    line-clamp: 6;
-    /* Standard property */
+.blog-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align cards to the left */
+  gap: 1rem; /* Add spacing between cards */
 }
 
-.card-description {
-    /* max-height: 4.5em; */
-    /* 3 lines of text */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    line-clamp: 6;
-    /* Standard property */
+.blog-card a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+.blog-card-img {
+  width: 100%;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+.blog-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2; /* Added standard property for compatibility */
+}
+
+.blog-card-body {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to approximately 5 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 5; /* Added standard property for compatibility */
+  min-height: 6rem; /* Set a minimum height to ensure uniformity */
+  height: 6rem; /* Set a fixed height to ensure all cards are the same size */
+}
+
+.blog-card-footer {
+  font-size: 0.875rem;
+  color: #ccc; /* Adjusted footer text color for better contrast */
 }
