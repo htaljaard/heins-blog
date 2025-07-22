@@ -1,7 +1,7 @@
 ---
 title: "Creating Your First Agent with Copilot Studio"
 date: "2025-06-12"
-slug: "creating-your-first-agent-copilot-studio"
+slug: "publishing-your-agent-to-chat"
 video: "https://www.youtube.com/embed/Yzzqs3RiJOU?si=la3S6yx0zrvdFg5w"
 hero_image: ""
 hero_image_alt: ""
