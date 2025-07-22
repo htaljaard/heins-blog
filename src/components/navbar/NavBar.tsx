@@ -28,7 +28,7 @@ export function NavBar(props: INavBarProps) {
                         <Nav.Link href="https://www.linkedin.com/in/hein-taljaard-4386a514" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin size={20} className="icon" />
                         </Nav.Link>
-                        <Nav.Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <Nav.Link href="https://github.com/htaljaard" target="_blank" rel="noopener noreferrer">
                             <FaGithub size={20} className="icon" />
                         </Nav.Link>
                     </Nav>

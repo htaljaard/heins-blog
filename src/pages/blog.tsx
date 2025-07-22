@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import BlogList from '../components/BlogList/BlogList';
 import SearchAndFilter from '../components/SearchAndFilter';
 import { useState } from 'react';
+import TopicsSection from '../components/TopicsSection';
 
 export interface IBlogPageProps {
 }
@@ -20,7 +21,6 @@ const BlogPage = ({ location, data }) => {
 
   return (
     <Layout location={location} title="Blogs">
-      {/* <SearchAndFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
       <BlogList posts={filteredPosts}></BlogList>
     </Layout>
   );
@@ -49,6 +49,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          stack
         }
       }
     }

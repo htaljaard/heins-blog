@@ -84,3 +84,23 @@
   border-radius: 0.25rem;
   margin-top: 1rem;
 }
+
+.filter-section .react-select__control {
+    background-color: var(--background-color, #fff) !important; /* Use app's background color */
+    color: var(--text-color, #000) !important; /* Use app's text color */
+}
+
+.filter-section .react-select__menu {
+    background-color: var(--background-color, #fff) !important; /* Use app's background color */
+    color: var(--text-color, #000) !important; /* Use app's text color */
+}
+
+.filter-section .react-select__option--is-selected {
+    background-color: var(--primary-color, #15202b) !important; /* Use app's primary color */
+    color: var(--text-on-primary, #fff) !important; /* Use text color for primary */
+}
+
+.filter-section .react-select__option:hover {
+    background-color: var(--hover-color, #e9ecef) !important; /* Use hover color */
+    color: var(--text-color, #000) !important; /* Use app's text color */
+}
