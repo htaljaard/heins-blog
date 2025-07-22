@@ -49,41 +49,43 @@ const BlogList = ({ posts }: IBlogListProps) => {
 
     return (
         <Container style={{ paddingTop: '20px' }}>
-            <div className="filter-section">
-                <Form>
-                    <Form.Group controlId="technologyFilter">
-                        <Form.Label>Technology Stack</Form.Label>
-                        <Select
-                            isMulti
-                            options={technologies}
-                            value={selectedTechnologies}
-                            onChange={handleFilterChange}
-                            placeholder="Select technologies"
-                            styles={customStyles} // Apply custom styles
-                        />
-                    </Form.Group>
-                </Form>
-            </div>
-            <div className="blog-card-container">
-                {filteredPosts &&
-                    filteredPosts.map((node) => (
-                        <article key={node.id} className="blog-card">
-                            <Link to={node.fields.slug}>
-                                <div>
-                                    <h2 className="blog-card-title">
-                                        {node.frontmatter.title}
-                                    </h2>
-                                    <p className="blog-card-body">
-                                        {node.excerpt}
-                                    </p>
-                                    <div className="blog-card-footer">
-                                        {node.frontmatter.date}
+            <div className="filter-blog-container">
+                <div className="filter-section">
+                    <Form>
+                        <Form.Group controlId="technologyFilter">
+                            <Form.Label>Technology Stack</Form.Label>
+                            <Select
+                                isMulti
+                                options={technologies}
+                                value={selectedTechnologies}
+                                onChange={handleFilterChange}
+                                placeholder="Select technologies"
+                                styles={customStyles} // Apply custom styles
+                            />
+                        </Form.Group>
+                    </Form>
+                </div>
+                <div className="blog-card-container">
+                    {filteredPosts &&
+                        filteredPosts.map((node) => (
+                            <article key={node.id} className="blog-card">
+                                <Link to={node.fields.slug}>
+                                    <div>
+                                        <h2 className="blog-card-title">
+                                            {node.frontmatter.title}
+                                        </h2>
+                                        <p className="blog-card-body">
+                                            {node.excerpt}
+                                        </p>
+                                        <div className="blog-card-footer">
+                                            {node.frontmatter.date}
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </article>
-                    ))
-                }
+                                </Link>
+                            </article>
+                        ))
+                    }
+                </div>
             </div>
         </Container>
     );
