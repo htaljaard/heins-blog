@@ -14,23 +14,79 @@ next: ""
 previous: ""
 ---
 
-### Introduction
-Hey everyone! Today, I want to share some insights and experiences I've had with Co-pilot Studio tools, specifically focusing on prompts. Over the last 24 hours, I've encountered some significant issues that I believe many of you might also be facing. In this blog post, I'll walk you through these challenges and the solutions I've been working on. Let's dive in!
 
-### Understanding Prompts in Co-pilot Studio
-Prompts in Co-pilot Studio are essential for creating consistent and effective workflows. They allow us to connect to APIs, agent flows, and Power Platform connectors, making the tools immensely powerful. For instance, when creating a tool, we have options to create agent flows and custom connectors, which are crucial for maintaining consistency across environments.
+# Building Responsible AI Agents with Copilot Studio and Azure Application Insights
 
-### Challenges with Custom Prompts
-One of the main challenges I've faced is with custom prompts. For example, when creating a job description agent, the custom prompt needs to have a preset instruction or intent. However, if you forget to change the date and time in the prompt, it can cause issues. Additionally, renaming objects and database tables can be problematic, as you can't rename the underlying object name, leading to inconsistencies.
+In the fast-evolving world of AI agent development, it’s easy to get caught up in the excitement of what’s possible. But as we scale our solutions—especially in enterprise environments—questions around **monitoring**, **sustainability**, and **responsible development** quickly surface.
 
-Another significant challenge is that the agent gets added to the default solution by default, which can be inconvenient. You can manually include the plugin in your solution, but it's a bit of a hassle.
+This post dives into how we can go beyond just building agents in **Copilot Studio**, and start thinking about how to **track**, **understand**, and **support** them in production. The key? **Azure Application Insights**.
 
-### Solutions and Workarounds
-To address these challenges, I've found a few workarounds. For instance, when creating a prompt, it's essential to be specific with the instructions and ensure that the inputs are correctly configured. If the inputs are missing, you can manually add them by copying examples from other prompts.
+---
 
-Additionally, when deploying a test agent to a different environment, you need to manually add the plugins to the solution, as they aren't included by default. This can be done by adding existing custom operations as required by the deployment pipeline.
+## Why Monitoring Matters
 
-### Conclusion
-In conclusion, while Co-pilot Studio tools are incredibly powerful, they come with their own set of challenges, especially when working with custom prompts. By being aware of these issues and using the workarounds mentioned, you can ensure a smoother experience. If you've encountered similar problems or have any solutions, I'd love to hear from you. Let's connect and share our experiences!
+When IT teams start pushing back on AI implementations, it’s rarely about the tech itself. It’s about the **lack of visibility**. How do we know what the agent is doing? How do we detect when something goes wrong? How do we ensure the system is maintainable?
 
-Thanks for reading, and until next time\! 
+These aren’t just enterprise concerns—they’re **responsible development concerns**. And they’re critical if we want our solutions to be trusted and scalable.
+
+---
+
+## What Copilot Studio Offers Out-of-the-Box
+
+Copilot Studio provides a user-friendly interface for building agents, and it does offer some basic monitoring capabilities. You can see which flows are triggered, what data is accessed, and how users interact with the agent.
+
+But for deeper insights—especially across multiple agents or hybrid architectures—you need something more robust.
+
+---
+
+## Enter Azure Application Insights
+
+**Azure Application Insights** is a powerful telemetry platform that allows you to instrument your applications and agents. It’s widely used in the pro-code world, but it’s just as valuable for low-code solutions.
+
+Here’s what it enables:
+- **Structured logging**: Capture detailed traces of agent activity.
+- **User behaviour tracking**: See which buttons are clicked, which flows are triggered, and how users interact.
+- **Centralised monitoring**: Aggregate telemetry from multiple agents and applications into a single dashboard.
+
+And the best part? It’s **cheap to run** and **easy to set up**.
+
+---
+
+## Setting It Up
+
+To integrate Application Insights with your Copilot Studio agent:
+1. Create an Application Insights instance in Azure.
+2. Grab the **connection string** from the instance.
+3. In your agent settings, go to **Advanced** and paste the connection string.
+
+Now, every time your agent takes an action—like calling a flow or writing to a database—you’ll see a trace in Application Insights.
+
+---
+
+## Real-World Example: NCCD Support Assistant
+
+In the video, we walk through an agent built for the education space: the **NCCD Support Assistant**. It interacts with several flows, including:
+- Accessing the NCCD public website
+- Adjusting data tables
+- Registering entries in a database
+
+By connecting this agent to Application Insights, we can monitor every interaction, track performance, and ensure the system behaves as expected.
+
+---
+
+## Unified Telemetry Across Architectures
+
+One of the most powerful aspects of Application Insights is its ability to unify telemetry across different types of applications. Whether you’re running:
+- Low-code agents in Copilot Studio
+- Azure Functions
+- Bespoke pro-code applications
+
+You can surface all telemetry in one place. This makes it easier to manage, monitor, and support your entire AI strategy.
+
+---
+
+## Final Thoughts
+
+Building AI agents is just the beginning. To make them truly enterprise-ready, we need to think about **observability**, **sustainability**, and **supportability**.
+
+Azure Application Insights gives us the tools to do just that—without adding complexity or cost.
