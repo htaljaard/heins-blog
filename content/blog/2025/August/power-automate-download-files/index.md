@@ -16,7 +16,7 @@ previous: ""
 
 # Automating Vendor CSV Downloads from Email Using Power Automate (Free Connectors Only - Almost...)
 
-Recently, I helped a client streamline the process of handling vendor CSV files sent via email. One particular vendor required manual downloads because their emails contained links rather than attachments. To solve this, we built an automated ETL (Extract, Transform, Load) process entirely in the cloud using **Power Automate** with mostly free connectors. Here’s how we did it.
+Recently, I helped a client streamline the process of handling vendor CSV files sent via email. One particular vendor required manual downloads because their emails contained links rather than attachments. To solve this, we built an automated ETL (Extract, Transform, Load) process entirely in the cloud using **Power Automate** with mostly free connectors. Well... Maybe not as much on the Transform side, but still...Here’s how we did it.
 
 ---
 
