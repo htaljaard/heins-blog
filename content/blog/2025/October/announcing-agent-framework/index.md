@@ -1,6 +1,6 @@
 ---
 title: "Announcing a unified Agent Framework"
-date: "2025-10-2"
+date: "2025-10-02"
 slug: "announcing-agent-framework"
 video: ""
 hero_image: ""

@@ -1,7 +1,7 @@
 ---
 
 title: "Copilot Studio Agent Prompt Tools: AIPluginRequestFailure"
-date: "2025-10-6"
+date: "2025-10-06"
 slug: "copilot-studio-agent-prompt-tools-plugin-not-found"
 video: ""
 hero_image: ""
