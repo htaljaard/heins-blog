@@ -33,6 +33,16 @@ Now that you have the questions, let's take a look at some of decisions I made s
 
 ## Keep everyone rowing in the same direction
 
+Ok...
+
+Step 1 - ```.gitignore```. Nothing worse than a repo cluttered with stuff that shouldn't be there. This one is obvious. 
+
+Step 2: - ```.editorconfig```. All the code will roughly look the same, easy peasy. 
+
+Step 3: - This one people forget. **Central Package Management**. Create a ```Directory.Packages.props``` file at the root of your repo (same level as your solution file). This way, all your package versions go in one place while the ```cproj``` files will only contain references...
+
+![alt text](image-2.png)
+
 ## Dev-Time Orchastration
 
 We have all been there... that moment when you notice you spent endless hours crafting the exact ```appsettings.json``` file and then you wipe your machine... Or a new Dev Starts and no one thinks to tell them to copy the file from the super secret folder that the CISO is not allowed to know about because it contains keys that technically shouldn't be kept there... 
