@@ -15,9 +15,10 @@ previous: ""
 ---
 
 # Introduction
-Gettting a new project set up is almost like starting a new world in Minecraft or walking the first few steps of n bush walk on a route you don't know yet (Pick your poison). There are so many decisions to make but all projects have a similar base. When setting up a project, I think about how my team will work together, what the typical structure needs to look like (typically split by Business Domain - or "Vertivcal Slice"). 
+Gettting a new project set up is almost like starting a new world in Minecraft or walking the first few steps of n bush walk on a route you don't know yet (Pick your poison). There are so many decisions to make but all projects have a similar base. When setting up a project, I think about how my team will work together, what the typical structure needs to look like (typically split by Business Domain - or "Vertical Slice"). 
 
 When I kicked off #patientapp, I asked myself a few questions to help me figure out what I need to do first. These questions are split into Tech Questions and Business Questions. 
+
 
 | Tech Questions | Business Questions |
 | -------------- | ------------------ |
@@ -27,7 +28,9 @@ When I kicked off #patientapp, I asked myself a few questions to help me figure 
 | How am I going to deploy this? (This one is a bit premature) |  |
 | If I am building a Microservice or Modular Monolith (My favourite architecture at this point), how do modules communicate? | |
 
+
 Now that you have the questions, let's take a look at some of decisions I made so far.
+
 
 # Making it easy to build (and later deploy)
 
